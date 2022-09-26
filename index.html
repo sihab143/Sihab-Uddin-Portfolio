@@ -5,14 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/995dfd533a.js" crossorigin="anonymous"></script>
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/> -->
     <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
 </head>
 <body>
-    <div class="navigation">
+    <!-- <header>
+        <div class="bg-warning py-2"> 
+         Some top header info 
+        </div>
+        
+        <nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark bg-primary">
+         <div class="container">
+              <a class="navbar-brand" href="#">Brand</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#contact"> Menu item </a></li>
+                <li class="nav-item"><a class="nav-link" href="#about"> Menu item </a></li>
+            <li class="nav-item"><a class="nav-link" href="#"> Menu item </a></li>
+            </ul>
+          </div> navbar-collapse.//
+         </div> container-fluid.//
+        </nav>
+        </header> -->
+        
+<div class="nav-header" id="nav-header">
+    <a href="" class="logo">SR</a>
+    <ul>
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>  
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+
+<div class="navigation">
+    <div class="progress"></div>
+</div>
+
+
+
+    <!-- <div class="navigation">
         <div class="container">
             <nav>
                 <div class="spinner">
+                    <h1><span>S</span>R</h1>
                     <img src="images/logo.jpg" alt="" class="logo">
                 </div>
                 <ul>
@@ -20,12 +61,12 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
         <div class="progress"></div>
-    </div>
+    </div> -->
     
     <div id="header">
         <div class="header">
@@ -157,7 +198,37 @@
 
     <!-- contact -->
 
+<div class="contact" id="contact">
+    <h1 class="sub-title">Contact <span>Us</span></h1>
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <p><i class="fas fa-paper-plane"></i> sohanur.sr63@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> +8801742-582121</p>
+                <div class="social-icons">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter-square"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="images/3.jpg" download class="btn cv">Download <i>CV</i> </a>
 
+            </div>
+            
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn contact-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; Sihab, Made With <i class="fas fa-heart"></i> by TrustSoft24.com</p>
+    </div>
+</div>
     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
