@@ -73,6 +73,10 @@ body{
     color: black;
 }
 
+
+/* ------------------------------- */
+
+
 .navigation{
     /* background: black; */
     position: sticky;
@@ -86,6 +90,7 @@ body{
     min-width: 0%; 
 }
 
+/* 
 .navigation .container{
     padding: 10px 10%;
     
@@ -128,10 +133,15 @@ nav ul li a::after{
 
 nav ul li a:hover::after{
     width: 100%;
-}
+} */
+
 
 
 /* -------- nav end ---------*/
+
+
+
+
 .header{
     /* background: blue; */
     margin-top: 50px;
@@ -260,7 +270,11 @@ nav ul li a:hover::after{
     display: block;
 }
 
-/* services---------- */
+
+
+/* -----------services---------- */
+
+
 
 
 .services{
@@ -327,7 +341,13 @@ nav ul li a:hover::after{
     background: #262626;
 }
 
-/* portfolio */
+
+
+
+/* ------------portfolio -------------*/
+
+
+
 
 .sub-title span{
     color: #ff004f;
@@ -500,7 +520,12 @@ nav ul li a:hover::after{
 }
 
 
+
+
 /* ---------contact------------ */
+
+
+
 
 
 .contact{
@@ -595,6 +620,9 @@ form input, form textarea{
 .copyright i{
     color: crimson;
 }
+
+
+
 
 @media (max-width: 768px){
     .header-text h1{
