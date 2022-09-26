@@ -76,7 +76,7 @@ body{
 .navigation{
     /* background: black; */
     position: sticky;
-    top: 45px;
+    top: 0;
 }
 .progress { 
     left: 0; 
