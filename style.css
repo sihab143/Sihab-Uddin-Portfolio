@@ -14,7 +14,7 @@ body{
     background: #080808;
     color: white;
 }
-
+/* 
 
 .nav-header{
     position: fixed;
@@ -71,16 +71,18 @@ body{
 }
 .nav-header.sticky ul li a{
     color: black;
-}
+} */
 
 
 /* ------------------------------- */
 
 
 .navigation{
-    /* background: black; */
+    background: black;
     position: sticky;
     top: 0;
+    z-index: 10;
+    /* opacity: 0.5; */
 }
 .progress { 
     left: 0; 
@@ -90,7 +92,7 @@ body{
     min-width: 0%; 
 }
 
-/* 
+
 .navigation .container{
     padding: 10px 10%;
     
@@ -133,7 +135,7 @@ nav ul li a::after{
 
 nav ul li a:hover::after{
     width: 100%;
-} */
+}
 
 
 
@@ -604,8 +606,9 @@ form input, form textarea{
     background: crimson;
     font-size: 15px;
     margin-top: 20px;
-    padding: 10px 25px;
+    padding: 10px 25px ;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .copyright{
@@ -663,6 +666,14 @@ form input, form textarea{
     
 }
 
+nav .fas{
+    display: none;
+}
+
+#msg{
+    color: #61b712;
+}
+
 @media (max-width: 400px){
     .header-text h1{
         font-size: 20px;
@@ -677,14 +688,48 @@ form input, form textarea{
         height: 100px;
     }
 
-    nav ul li a{
+    /* nav ul li a{
         font-size: 10px;
-    }
+    } */
 
     .lorem {
         text-align: justify;
         padding-right: 10%;
     }
+
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: #262626;
+        position: fixed;
+        top: 0;
+        right: -100px;
+        width: 100px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 10;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .copyright{
+        font-size: 12px;
+    }
+
 }
 
 .spinner h1{

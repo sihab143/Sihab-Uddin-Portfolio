@@ -31,7 +31,7 @@
          </div> container-fluid.//
         </nav>
         </header> -->
-        
+<!--         
 <div class="nav-header" id="nav-header">
     <a href="" class="logo">SR</a>
     <ul>
@@ -45,28 +45,30 @@
 
 <div class="navigation">
     <div class="progress"></div>
-</div>
+</div> -->
 
 
 
-    <!-- <div class="navigation">
+    <div class="navigation">
         <div class="container">
             <nav>
                 <div class="spinner">
                     <h1><span>S</span>R</h1>
-                    <img src="images/logo.jpg" alt="" class="logo">
+                    <!-- <img src="images/logo.jpg" alt="" class="logo"> -->
                 </div>
-                <ul>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header" onclick="homemenu()">Home</a></li>
+                    <li><a href="#about" onclick="aboutmenu()">About</a></li>
+                    <li><a href="#services" onclick="servicesmenu()">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
         </div>
         <div class="progress"></div>
-    </div> -->
+    </div>
     
     <div id="header">
         <div class="header">
@@ -86,43 +88,45 @@
 
     <!-- about -->
 
-    <div class="about-bg" id="about">
-        <div class="about">
-            <h1 class="sub-title">About <span>Me</span></h1>
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1">
-                        <img src="images/3.jpg" alt="" class="about-image">
-                    </div>
-                    <div class="about-col-2">
-                        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore doloribus non reprehenderit quibusdam ipsa saepe ab. Voluptatibus unde repellat illo sint nostrum explicabo debitis eaque.</p>
-                        
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
+    <div id="about">
+        <div class="about-bg">
+            <div class="about">
+                <h1 class="sub-title">About <span>Me</span></h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="images/3.jpg" alt="" class="about-image">
                         </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li><span>UI?UX</span><br>Designing Web/App interface</li>
-                                <li><span>Web Development</span><br>Web Developer Php & Laravel</li>
-                                <li><span>App Developer</span><br>Building Android/ios apps</li>
-                            </ul>
-                        </div>
-
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li><span>Front End</span><br>Designing Website</li>
-                                <li><span>Web Development</span><br>Web Developer Php & Laravel</li>
-                                <li><span>App Developer</span><br>Building Android/ios apps</li>
-                            </ul>
-                        </div>
-
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span>B. Sc.</span><br>Computer Science & Enginerring</li>
-                                <li><span>Training</span><br>PHP pwith Laravel framework from BITM</li>
-                            </ul>
+                        <div class="about-col-2">
+                            <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore doloribus non reprehenderit quibusdam ipsa saepe ab. Voluptatibus unde repellat illo sint nostrum explicabo debitis eaque.</p>
+                            
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>UI?UX</span><br>Designing Web/App interface</li>
+                                    <li><span>Web Development</span><br>Web Developer Php & Laravel</li>
+                                    <li><span>App Developer</span><br>Building Android/ios apps</li>
+                                </ul>
+                            </div>
+    
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>Front End</span><br>Designing Website</li>
+                                    <li><span>Web Development</span><br>Web Developer Php & Laravel</li>
+                                    <li><span>App Developer</span><br>Building Android/ios apps</li>
+                                </ul>
+                            </div>
+    
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>B. Sc.</span><br>Computer Science & Enginerring</li>
+                                    <li><span>Training</span><br>PHP pwith Laravel framework from BITM</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -216,12 +220,13 @@
             </div>
             
             <div class="contact-right">
-                <form>
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                <form name="submit-to-google-sheet" onsubmit="sendEmail(); return false;">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn contact-btn">Submit</button>
                 </form>
+                <h4 id="msg"></h4>
             </div>
         </div>
     </div>
@@ -233,6 +238,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="min.js"></script>
+
 </body>
 </html>

@@ -82,3 +82,67 @@ window.addEventListener('scroll', function(){
   var header = document.getElementById('nav-header');
   header.classList.toggle("sticky", window.scrollY > 0);
 })
+
+
+var sidemenu = document.getElementById('sidemenu');
+
+function openmenu(){
+  sidemenu.style.right = "0";
+}
+
+function closemenu(){
+  sidemenu.style.right = "-100px";
+}
+
+var about = document.getElementById('about');
+function aboutmenu(){
+  about.style.paddingTop = "20px";
+}
+
+var services = document.getElementById('services');
+ 
+function servicesmenu(){
+  services.style.paddingTop = "85px";
+}
+
+
+
+// google sheet store contact form
+
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxtGWO--d3w2tn1gU5QoIJYUpuaHvLcNWkxReKvF6uwS1AvWpiDiCNdHmgiAteHvZEG/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById('msg');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+
+
+  function sendEmail(){
+              Email.send({
+                    Host : "smtp.gmail.com", 
+                    Username : "sohanur.sr63@gmail.com",
+                    Password : "kflywyudzoqxozwx",
+                    To : document.getElementById('email').value,
+                    From : 'sohanur.sr63@gmail.com',
+                    Subject : "This is the subject",
+                    Body : "And this is the body"
+                }).then(
+                  message => alert("message")
+            );
+  }
+
+  // Username : "jansara237@gmail.com",
+  //Password : "8ADDB8540811A636B7C8CE33F597EA214308"
+
+  // Password : "528CDE78AC8E6A42FE4292579D3A5F1B071B" 
